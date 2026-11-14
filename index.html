@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>王运涛 · 经济学硕士简历</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #f8fbff 0%, #edf3fa 35%, #e6edf7 100%);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem;
+      line-height: 1.5;
+      color: #1e293b;
+    }
+
+    /* 主卡片 */
+    .resume-card {
+      max-width: 1180px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 1.7rem;
+      box-shadow: 0 28px 60px -24px rgba(15, 23, 42, 0.22), 0 8px 18px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    /* ========== 左侧栏 ========== */
+    .sidebar {
+      background: linear-gradient(180deg, #1a2a3d 0%, #1f3249 100%);
+      color: #eef2f6;
+      padding: 2rem 1.7rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .profile-pic {
+      text-align: center;
+      margin-bottom: 0.2rem;
+    }
+
+    /* 头像占位 — 使用用户图标 + 姓名首字母，也可以自行替换为照片 */
+    .avatar-icon {
+      font-size: 6rem;
+      color: #b9d0e8;
+      background: linear-gradient(135deg, #32577a 0%, #223d59 100%);
+      width: 138px;
+      height: 138px;
+      line-height: 138px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(178, 203, 230, 0.45);
+      box-shadow: inset 0 0 0 4px rgba(255,255,255,0.04);
+      transition: transform 0.2s;
+      overflow: hidden;
+    }
+
+    .avatar-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .avatar-icon i {
+      font-size: 5rem;
+      color: #cfdef0;
+    }
+
+    .name-side {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+      color: white;
+      text-align: center;
+    }
+
+    .title-side {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #a3bbd4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      border-bottom: 1px solid #3f556b;
+      padding-bottom: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* 侧边栏模块标题 */
+    .section-title-side {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+      color: #91aec9;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title-side i {
+      font-size: 1rem;
+      width: 1.4rem;
+      color: #7d9cbb;
+    }
+
+    /* 联系方式 */
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 0.2rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.9rem;
+      color: #cfdeed;
+      transition: color 0.2s;
+      word-break: break-word;
+    }
+
+    .contact-item i {
+      width: 1.4rem;
+      font-size: 1.1rem;
+      color: #7d9cbb;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item span {
+      line-height: 1.4;
+    }
+
+    /* 技能标签 */
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.2rem;
+    }
+
+    .skill-tag {
+      background: #2e4057;
+      color: #d9e6f2;
+      padding: 0.35rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      border: 1px solid #3e5a74;
+      transition: 0.15s;
+    }
+
+    .skill-tag:hover {
+      background: #3c5774;
+      border-color: #6c8eb0;
+    }
+
+    /* 语言能力 */
+    .language-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      color: #cfdeed;
+    }
+
+    .language-name {
+      font-weight: 500;
+    }
+
+    .language-level {
+      color: #91aec9;
+      font-size: 0.8rem;
+      background: #26384b;
+      padding: 0.15rem 0.6rem;
+      border-radius: 30px;
+    }
+
+    .divider-light {
+      border: 0;
+      height: 1px;
+      background: #3f556b;
+      margin: 0.5rem 0 1.2rem;
+    }
+
+    /* ========== 右侧主内容 ========== */
+    .main-content {
+      padding: 2.2rem 2.5rem 2.3rem;
+      background: #ffffff;
+    }
+
+    .profile-header {
+      margin-bottom: 1.8rem;
+      padding: 0.2rem 0 0.5rem;
+    }
+
+    .greeting {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #3b6e9e;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .full-name {
+      font-size: clamp(2.2rem, 3vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: #0b1e2e;
+      line-height: 1.12;
+      margin-bottom: 0.35rem;
+    }
+
+    .job-title {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: #3d5d7c;
+      margin-bottom: 1rem;
+    }
+
+    .bio {
+      color: #475f73;
+      font-size: 0.97rem;
+      max-width: 92%;
+      line-height: 1.7;
+      border-left: 4px solid #bfd1ea;
+      padding-left: 1.1rem;
+      margin-top: 0.9rem;
+      background: linear-gradient(90deg, rgba(190,214,238,0.18), rgba(255,255,255,0));
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    /* 右侧通用标题 */
+    .section-title-main {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: #1f3549;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e9eef5;
+      padding-bottom: 0.55rem;
+    }
+
+    .section-title-main i {
+      color: #3b6e9e;
+      font-size: 1.2rem;
+      width: 1.6rem;
+    }
+
+    /* 经历条目 */
+    .experience-item, .project-item, .edu-item {
+      margin-bottom: 1.2rem;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+      border: 1px solid #edf2f7;
+      border-radius: 1rem;
+      padding: 1rem 1.1rem 0.9rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.45rem 1rem;
+      margin-bottom: 0.38rem;
+    }
+
+    .item-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0d2a3f;
+      letter-spacing: -0.01em;
+    }
+
+    .item-subtitle {
+      font-weight: 500;
+      color: #3d5d7c;
+      font-size: 0.9rem;
+    }
+
+    .item-date {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #5d7f9c;
+      background: #eef4fa;
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      white-space: nowrap;
+    }
+
+    .item-location {
+      font-size: 0.8rem;
+      color: #5b7e9b;
+      margin-bottom: 0.55rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding-left: 0.15rem;
+    }
+
+    .item-location i {
+      font-size: 0.75rem;
+    }
+
+    .item-description {
+      font-size: 0.9rem;
+      color: #3f566b;
+      margin-top: 0.5rem;
+      line-height: 1.65;
+      padding-left: 0.15rem;
+    }
+
+    .item-description ul {
+      list-style: none;
+      padding-left: 0.1rem;
+    }
+
+    .item-description li {
+      margin-bottom: 0.45rem;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .item-description li::before {
+      content: "▹";
+      color: #3b6e9e;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    /* 列表式项目内容（用于核心项目，粗体标签） */
+    .project-list {
+      list-style: none;
+      padding-left: 0.15rem;
+      margin-top: 0.45rem;
+    }
+
+    .project-list li {
+      margin-bottom: 0.7rem;
+      display: grid;
+      grid-template-columns: 0.6rem max-content minmax(0, 1fr);
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: #3f566b;
+      line-height: 1.65;
+    }
+
+    .project-list li::before {
+      content: "▹";
+      color: #3b6e9e;
+      font-weight: 700;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .project-list strong {
+      color: #1d3b53;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .portfolio-section-title {
+      margin-top: 2rem;
+    }
+
+    .portfolio-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 1.2rem;
+      padding: 1.35rem;
+      margin-bottom: 2rem;
+    }
+
+    .portfolio-card .item-title {
+      color: #1e3a5f;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-badge {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .portfolio-meta {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+      margin: 0.65rem 0 0.9rem;
+      color: #3d5d7c;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .portfolio-meta i {
+      color: #64748b;
+      margin-top: 0.2rem;
+    }
+
+    .portfolio-list {
+      margin-bottom: 1.2rem;
+    }
+
+    .portfolio-report-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #1e2b3c;
+      color: #ffffff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .portfolio-report-link:hover {
+      background: #304761;
+    }
+
+    hr.sep {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #dfeaf6 0%, #edf2f7 50%, #dfeaf6 100%);
+      margin: 1.5rem 0 1rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 900px) {
+      .resume-card {
+        grid-template-columns: 1fr;
+        border-radius: 2rem;
+      }
+
+      .sidebar {
+        padding: 2rem 1.8rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .profile-pic {
+        grid-column: span 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+      }
+
+      .avatar-icon {
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        margin: 0;
+        font-size: 3.5rem;
+      }
+
+      .avatar-icon i {
+        font-size: 3.5rem;
+      }
+
+      .name-side {
+        text-align: left;
+        font-size: 1.8rem;
+      }
+
+      .title-side {
+        text-align: left;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .sidebar > div:not(.profile-pic) {
+        grid-column: span 2;
+      }
+
+      .main-content {
+        padding: 2rem 1.8rem;
+      }
+
+      .full-name {
+        font-size: 2.4rem;
+      }
+
+      .bio {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 550px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .profile-pic {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .name-side, .title-side {
+        text-align: center;
+      }
+
+      .main-content {
+        padding: 1.8rem 1.4rem;
+      }
+
+      .full-name {
+        font-size: 2rem;
+      }
+
+      .item-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* 打印样式 */
+    @media print {
+      body {
+        background: white;
+        padding: 0.3in;
+      }
+      .resume-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+      }
+      .sidebar {
+        background: #f0f4fa;
+        color: #1e2b3c;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .sidebar .section-title-side,
+      .sidebar .contact-item i,
+      .sidebar .language-level {
+        color: #2d4b68;
+      }
+      .avatar-icon {
+        border-color: #a0b8d0;
+      }
+      .skill-tag {
+        background: #e2eaf2;
+        color: #1e2b3c;
+        border-color: #b8c9db;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-card">
+    <!-- 左侧栏 -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <div class="avatar-icon">
+          <img src="./微信图片_20251123025130_30_19.png" alt="王运涛头像">
+        </div>
+        <div>
+          <div class="name-side">王运涛</div>
+          <div class="title-side">经济学硕士 · 金融分析</div>
+        </div>
+      </div>
+
+      <!-- 联系方式 -->
+      <div>
+        <div class="section-title-side">
+          <i class="fas fa-address-card"></i> 联系方式
+        </div>
+        <div class="contact-list">
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <span>yuntao-wang-xuv7ouh.gamma.site</span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider-light">
+
+      <!-- 专业技能（标签形式） -->
+      <div>
+        <div class="section-title-side">
+          <i class="fas fa-chart-line"></i> 专业技能
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">财务报表分析</span>
+          <span class="skill-tag">同业比较</span>
+          <span class="skill-tag">估值与可行性</span>
+          <span class="skill-tag">市场研究</span>
+          <span class="skill-tag">风险评估</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">R (RStudio)</span>
+          <span class="skill-tag">Stata</span>
+        </div>
+      </div>
+
+      <hr class="divider-light">
+
+      <!-- 语言能力 -->
+      <div>
+        <div class="section-title-side">
+          <i class="fas fa-globe"></i> 语言
+        </div>
+        <div class="language-item">
+          <span class="language-name">中文</span>
+          <span class="language-level">母语</span>
+        </div>
+        <div class="language-item">
+          <span class="language-name">英语</span>
+          <span class="language-level">流利 · 可阅读财务资料</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 右侧主要内容区 -->
+    <main class="main-content">
+      <!-- 头部简介 -->
+      <div class="profile-header">
+        <div class="greeting">你好，我是</div>
+        <h1 class="full-name">王运涛</h1>
+        <div class="job-title">经济学硕士 · 应用计量经济学 · 昆士兰大学</div>
+        <div class="bio">
+          具备扎实的经济学与金融学背景，擅长财务分析、估值建模与风险评估。
+          拥有养老地产投资分析实习经验，以及多项行业研究项目经历，能够熟练使用R、Stata等工具进行数据分析。
+        </div>
+      </div>
+
+      <!-- 教育经历 -->
+      <div class="section-title-main">
+        <i class="fas fa-graduation-cap"></i> 教育背景
+      </div>
+
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">经济学硕士 · 应用计量经济学</span>
+          <span class="item-date">2023 – 2025</span>
+        </div>
+        <div class="item-subtitle">昆士兰大学 (The University of Queensland)</div>
+        <div class="item-description">
+          <ul>
+            <li>核心课程：宏观经济学与金融应用计量学、微观经济学、经济统计理论、经济学与金融领域的大数据与机器学习、经济计量理论。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="item-header">
+          <span class="item-title">商科学士 · 金融</span>
+          <span class="item-date">2020 – 2023</span>
+        </div>
+        <div class="item-subtitle">昆士兰大学 (The University of Queensland)</div>
+        <div class="item-description">
+          <ul>
+            <li>主修课程：财务分析与报告、管理会计导论、金融学、商业数据分析基础、金融衍生品和风险管理、国际金融管理、房地产金融、银行贷款和决策、企业金融、资产定价、并购以及商业数据分析。</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="sep">
+
+      <!-- 实习项目 -->
+      <div class="section-title-main">
+        <i class="fas fa-briefcase"></i> 实习项目
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">投资分析实习生</span>
+          <span class="item-date">2025.05 – 2025.08</span>
+        </div>
+        <div class="item-subtitle">Rockpool Residential Aged Care – Rockpool Northshore 项目</div>
+        <div class="item-location">
+          <i class="fas fa-map-pin"></i> 房地产投资估值与风险估值
+        </div>
+        <div class="item-description">
+          <ul>
+            <li>协助调研本地及国际房地产市场，收集整理核验同类养老地产项目交易及租金数据，使用R进行数据清洗、缺失值检查，筛选可比项目，协助建立项目估值基准。</li>
+            <li>协助团队开展情景分析和敏感性分析，测算关键收入假设变化对项目估值、投资回报和偿债能力的影响，识别潜在现金流风险，完成风险评估材料与投资分析报告。</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="sep">
+
+      <!-- 核心项目经历 -->
+      <div class="section-title-main">
+        <i class="fas fa-rocket"></i> 核心项目经历
+      </div>
+
+      <!-- Wells Fargo -->
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Wells Fargo 财务绩效与经营风险分析</span>
+          <span class="item-date">2025.09 – 2025.11</span>
+        </div>
+        <ul class="project-list">
+          <li><strong>财务分析：</strong>基于2007-2016年财报，对Wells Fargo、Bank of America与JPMorgan Chase 开展同业比较，计算ROA、ROE、净息差、运营效率比及风险指标，评估盈利能力及财务风险。</li>
+          <li><strong>业务研究：</strong>分析交叉销售中的激励机制及配额制度，评估其对员工、客户及监管等利益相关者的影响，结合财务指标与业务风险完成综合分析报告。</li>
+        </ul>
+      </div>
+
+      <!-- Pershing Square -->
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Pershing Square 对冲策略案例研究</span>
+          <span class="item-date">2025.09 – 2025.10</span>
+        </div>
+        <ul class="project-list">
+          <li><strong>风险识别：</strong>复盘2020年新冠疫情初期股票组合的流动性风险与下行敞口，分析极端市场环境下的资本保护需求及对冲目标。</li>
+          <li><strong>策略评估：</strong>比较多种衍生品对冲方案，重点研究买入投资级与高收益CDS指数信用保护的机制、成本及实际效果，完成尾部风险对冲案例分析报告。</li>
+        </ul>
+      </div>
+
+      <!-- Meta -->
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Meta 资本结构与融资策略分析</span>
+          <span class="item-date">2024.09 – 2024.10</span>
+        </div>
+        <ul class="project-list">
+          <li><strong>同业比较：</strong>带领小组梳理Meta 2012-2023年杠杆指标的变化，选取两家同行业可比公司进行对标，分析资本结构与融资安排的差异。</li>
+          <li><strong>融资研究：</strong>运用资本结构权衡理论，研究长期债务发动机及资本成本优化路径，组织完成分析报告。</li>
+        </ul>
+      </div>
+
+      <!-- 重点项目展示 -->
+      <div class="section-title-main portfolio-section-title">
+        <i class="fas fa-file-invoice-dollar"></i> 重点项目作品集
+      </div>
+
+      <div class="project-item portfolio-card">
+        <div class="item-header">
+          <span class="item-title">Rockpool Northshore 养老地产开发投资可行性分析</span>
+          <span class="item-date portfolio-badge">实习项目</span>
+        </div>
+        <div class="portfolio-meta">
+          <i class="fas fa-tools"></i>
+          工具：Excel (DCF模型), 风险矩阵分析, 市场比较法
+        </div>
+
+        <ul class="project-list portfolio-list">
+          <li><strong>项目背景：</strong><span>针对昆士兰州 153 床位的顶级养老社区开发项目，完成从宏观市场分析、区位调研到财务可行性测算的全流程投资分析。</span></li>
+          <li><strong>财务建模：</strong><span>构建 Discounted Cash Flow (DCF) 模型及假设开发法模型。测算得出项目净现值 (NPV) 为 <strong>$3,876,991</strong>，内部收益率 (IRR) 为 <strong>6.2%</strong>，股本回报率 (ROE) 为 <strong>11.4%</strong>。</span></li>
+          <li><strong>风险分析：</strong><span>主导建立风险矩阵，评估 10 余项潜在风险（如酸性硫酸盐土壤、航空噪音等）并制定缓解策略。通过敏感性分析（资本化率 3%-7%，收入分成 5%-25%），证明项目在极端场景下仍保持正向 NPV。</span></li>
+        </ul>
+
+        <!-- 文档下载按钮 -->
+        <a class="portfolio-report-link" href="./Rockpool%20Residential%20Aged%20Care%20%E2%80%93%20Rockpool%20Northshore.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> 查看完整投资分析报告 (PDF)
+        </a>
+      </div>
+
+    </main>
+  </div>
+</body>
+</html>
